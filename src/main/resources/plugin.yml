@@ -1,0 +1,7 @@
+name: RTULightAntiCheat
+version: '${version}'
+main: com.github.ipecter.rtu.lightanticheat.RTULightAntiCheat
+api-version: 1.17
+softdepend: [ PlaceholderAPI ]
+authors: [ IPECTER ]
+description: RTU - Light Anti Cheat
