@@ -1,4 +1,4 @@
-# RTULightAntiCheat 1.0.0 - WIP (2023)
+# RTULightAntiCheat 1.0.0 - WIP (2022/12)
 [ Minecraft Plugin ] 1.17.X ~ 1.20.X Lightweight, Accurate, Stable Anti-Cheat
 
 ## Development Status
