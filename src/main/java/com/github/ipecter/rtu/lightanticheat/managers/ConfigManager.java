@@ -20,13 +20,6 @@ public class ConfigManager {
     private String prefix = IridiumColorAPI.process("<GRADIENT:ffffff>[ RTULightAntiCheat ]</GRADIENT:a3a3a3> ");
     private Map<String, String> msgKeyMap = Collections.synchronizedMap(new HashMap<>());
 
-    public ConfigManager() {
-    }
-
-    public final static ConfigManager getInstance() {
-        return InnerInstanceClass.instance;
-    }
-
     public boolean isEnablePlugin() {
         return enablePlugin;
     }
@@ -79,6 +72,10 @@ public class ConfigManager {
 
     public String getTranslation(String key) {
         return msgKeyMap.getOrDefault(key, "");
+    }
+
+    public final static ConfigManager getInstance() {
+        return InnerInstanceClass.instance;
     }
 
     private static class InnerInstanceClass {
