@@ -1,0 +1,41 @@
+package com.github.ipecter.rtu.lightanticheat.api;
+
+public enum CheckType {
+
+    FLIGHT_A_1,
+    FLIGHT_A_2,
+    FLIGHT_B_0,
+    FLIGHT_C_0,
+    FLIGHT_D_0,
+    BOAT_FLY_A_0,
+    ELYTRA_FLY_A_0,
+    ELYTRA_FLY_B_0,
+    SPEED_A_1,
+    SPEED_A_2,
+    MORE_PACKETS_A_0,
+    IRREGULAR_MOVEMENT_A_1,
+    IRREGULAR_MOVEMENT_A_2,
+    IRREGULAR_MOVEMENT_B_0,
+    IRREGULAR_MOVEMENT_C_1,
+    IRREGULAR_MOVEMENT_C_2,
+    IRREGULAR_MOVEMENT_C_3,
+    FLUID_WALK_A_1,
+    FLUID_WALK_A_2,
+    FLUID_WALK_B_0,
+    FAST_CLIMB_A_0,
+    CRITICALS_A_0,
+    IRREGULAR_PLACEMENT_A_0,
+    IRREGULAR_PLACEMENT_B_0,
+    NUKER_A_1,
+    NUKER_A_2,
+    NUKER_B_0,
+    REACH_A_1,
+    REACH_A_2,
+    KILL_AURA_A_0,
+    KILL_AURA_B_0,
+    KILL_AURA_C_0,
+    GROUND_SPOOF_A_0,
+    NO_WEB_A_0,
+    NO_WEB_B_0
+
+}

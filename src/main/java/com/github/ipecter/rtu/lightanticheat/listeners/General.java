@@ -1,5 +1,6 @@
-package com.github.ipecter.rtu.lightanticheat.checks.listeners;
+package com.github.ipecter.rtu.lightanticheat.listeners;
 
+import com.github.ipecter.rtu.lightanticheat.LACManager;
 import com.github.ipecter.rtu.lightanticheat.LACPlayer;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
@@ -12,9 +13,11 @@ import org.bukkit.event.player.*;
 
 public class General implements Listener {
 
+    private final LACManager lacManager = LACManager.getInstance();
+
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
     public void onJoin(PlayerJoinEvent event) {
-        LACPlayerM.add(event.getPlayer());
+        lacManager.add(event.getPlayer());
     }
 
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)

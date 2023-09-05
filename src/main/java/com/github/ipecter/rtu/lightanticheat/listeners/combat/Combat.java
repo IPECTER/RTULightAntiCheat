@@ -1,8 +1,8 @@
-package com.github.ipecter.rtu.lightanticheat.checks.listeners.combat;
+package com.github.ipecter.rtu.lightanticheat.listeners.combat;
 
 import com.github.ipecter.rtu.lightanticheat.LACPlayer;
-import com.github.ipecter.rtu.lightanticheat.checks.listeners.combat.reachutils.AABB;
-import com.github.ipecter.rtu.lightanticheat.checks.listeners.combat.reachutils.Ray;
+import com.github.ipecter.rtu.lightanticheat.listeners.combat.reachutils.AABB;
+import com.github.ipecter.rtu.lightanticheat.listeners.combat.reachutils.Ray;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Location;

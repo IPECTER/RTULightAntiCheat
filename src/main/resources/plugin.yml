@@ -3,5 +3,10 @@ version: '${version}'
 main: com.github.ipecter.rtu.lightanticheat.RTULightAntiCheat
 api-version: 1.17
 softdepend: [ PlaceholderAPI ]
-authors: [ IPECTER ]
-description: RTU - Light Anti Cheat
+authors: [ IPECTER (이팩터), Mkkas3145 (Original) ]
+description: RTU PLUGIN - Light Anti Cheat
+website: https://github.com/IPECTER/RTULightAntiCheat
+commands:
+libraries:
+  - net.kyori:adventure-platform-bukkit:4.3.0
+  - net.kyori:adventure-text-minimessage:4.13.0

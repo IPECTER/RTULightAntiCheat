@@ -1,11 +1,11 @@
-package com.github.ipecter.rtu.lightanticheat.checks.listeners.combat.reachutils;
-
-import org.bukkit.entity.Player;
-import org.bukkit.util.Vector;
+package com.github.ipecter.rtu.lightanticheat.util.combat.reach;
 
 //This code for ray tracing by 567legodude
 
 // Just a ray class I made with useful methods I needed.
+
+import org.bukkit.entity.Player;
+import org.bukkit.util.Vector;
 
 public record Ray(Vector origin, Vector direction) {
 

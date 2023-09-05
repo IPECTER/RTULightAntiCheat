@@ -1,0 +1,6 @@
+enable: true
+# KICK / BAN / CMD
+type: BAN
+# if Type is CMD
+command: "tempban blabla"
+sensitivityFlags: 40

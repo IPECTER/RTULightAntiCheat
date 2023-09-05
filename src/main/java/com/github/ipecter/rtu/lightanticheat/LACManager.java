@@ -17,13 +17,9 @@ public class LACManager {
     public void add(Player player) {
         final LACPlayer lacPlayer = new LACPlayer();
         playerMap.put(player.getUniqueId(), lacPlayer);
-        lacPlayer.isGeyser = Bukkit.getPluginManager().isPluginEnabled("floodgate") && FloodgateApi.getInstance().isFloodgatePlayer(player.getUniqueId());
-        final long time = System.currentTimeMillis();
-        lacPlayer.joinTime = time;
-        lacPlayer.lastGroundTime = time;
-        lacPlayer.lastNonGroundTime = time;
-        lacPlayer.lastHitTime = time;
-        lacPlayer.isBypass = player.hasPermission("rtulac.bypass") && !configManager.disableBypassPermission ||
+        lacPlayer.initTime();
+        lacPlayer.setGeyser(Bukkit.getPluginManager().isPluginEnabled("floodgate") && FloodgateApi.getInstance().isFloodgatePlayer(player.getUniqueId()));
+        lacPlayer.setBypass(player.hasPermission("rtulac.bypass") && !configManager.disableBypassPermission ||
                 !configManager.java && !lacPlayer.isGeyser || !configManager.bedrock && lacPlayer.isGeyser;
     }
 

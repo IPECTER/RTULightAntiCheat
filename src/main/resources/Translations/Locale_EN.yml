@@ -1,5 +1,7 @@
 #if Empty, Plugin uses default prefix
+#MiniMessage format: https://webui.advntr.dev/
 prefix: ""
-reloadMsg: "&aCompleted reloading config"
-commandWrongUsage: "&cWrong Usage&7, &fUse /rtulac reload"
-noPermission: "&cYou don't have permission"
+reloadMsg: "<green>Completed reloading config</green>"
+commandWrongUsage: "<red>Wrong Usage</red><gray>,</gray> <white>Use /rtube on<gray>/</gray>off</white>"
+commandWrongUsageOp: "<red>Wrong Usage</red><gray>,</gray> <white>Use /rtube reload<gray>/</gray>on<gray>/</gray>off</white>"
+commandWrongUsageConsole: "<red>Wrong Usage</red><gray>,</gray> <white>This command can only be used by Player</white>"

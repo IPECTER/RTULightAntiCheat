@@ -1,45 +1,58 @@
 package com.github.ipecter.rtu.lightanticheat;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class LACPlayer {
 
-    public boolean isPunishmentTimer = false;
-    public boolean isBypass = false;
-    public boolean isApiBypass = false;
-    public int ping = 0;
-    public boolean isGeyser = false;
-    public byte counterForViolationUpdate = 0;
-    public short movementViolations = 0;
-    public short accurateViolations = 0;
-    public short interactViolations = 0;
-    public short killauraViolations = 0;
-    public byte temporarilyViolations = 0;
-    public boolean IsTemporarilyViolationAllowed = false;
-    public short morepacketsViolations = 0;
-    public byte morepacketsFinalViolations = 0;
-    public long lastFireworkTime = 0;
-    public float lastElytraSpeed = 0.0F;
-    public byte forInaccurateViolationMethod = 0;
-    public byte forCancelFirstViolationMethod = 0;
-    public float lastNonGroundViolationX = 0.0F;
-    public float lastNonGroundViolationY = 0.0F;
-    public float lastNonGroundViolationZ = 0.0F;
-    public float lastY = 1.2345F;
-    public float lastLastY = 1.2345F;
-    public long lastJumpTime = 0;
-    public float lastFallDistance = (float) 1.2345;
-    public byte sameFallDistance = 0;
-    public byte fallDuration = 0;
-    public double lastVerticalVelocity = (float) 1.2345;
-    public byte sameVerticalVelocity = 0;
-    public long joinTime = 0;
-    public long lastGlidingTime = 0;
-    public long lastPreventTime = 0;
-    public long lastGroundTime = 0;
-    public long lastNonGroundTime = 0;
-    public long lastQuickBreakTime = 0;
-    public long lastHitTime = 0;
-    public long lastWarningAlertTime = 0;
-    public long lastTeleportTime = 0;
-    public long lastClickTime = 0;
+    private boolean isPunishmentTimer = false;
+    private boolean isBypass = false;
+    private boolean isApiBypass = false;
+    private int ping = 0;
+    private boolean isGeyser = false;
+    private byte counterForViolationUpdate = 0;
+    private short movementViolations = 0;
+    private short accurateViolations = 0;
+    private short interactViolations = 0;
+    private short killauraViolations = 0;
+    private byte temporarilyViolations = 0;
+    private boolean IsTemporarilyViolationAllowed = false;
+    private short morepacketsViolations = 0;
+    private byte morepacketsFinalViolations = 0;
+    private long lastFireworkTime = 0;
+    private float lastElytraSpeed = 0.0F;
+    private byte forInaccurateViolationMethod = 0;
+    private byte forCancelFirstViolationMethod = 0;
+    private float lastNonGroundViolationX = 0.0F;
+    private float lastNonGroundViolationY = 0.0F;
+    private float lastNonGroundViolationZ = 0.0F;
+    private float lastY = 1.2345F;
+    private float lastLastY = 1.2345F;
+    private long lastJumpTime = 0;
+    private float lastFallDistance = (float) 1.2345;
+    private byte sameFallDistance = 0;
+    private byte fallDuration = 0;
+    private double lastVerticalVelocity = (float) 1.2345;
+    private byte sameVerticalVelocity = 0;
+    private long joinTime = 0;
+    private long lastGlidingTime = 0;
+    private long lastPreventTime = 0;
+    private long lastGroundTime = 0;
+    private long lastNonGroundTime = 0;
+    private long lastQuickBreakTime = 0;
+    private long lastHitTime = 0;
+    private long lastWarningAlertTime = 0;
+    private long lastTeleportTime = 0;
+    private long lastClickTime = 0;
+
+    public void initTime() {
+        final long time = System.currentTimeMillis();
+        this.joinTime = time;
+        this.lastGroundTime = time;
+        this.lastNonGroundTime = time;
+        this.lastHitTime = time;
+    }
 
 }

@@ -1,4 +1,4 @@
-package com.github.ipecter.rtu.lightanticheat.checks.listeners.interaction;
+package com.github.ipecter.rtu.lightanticheat.listeners.interaction;
 
 import com.github.ipecter.rtu.lightanticheat.LACPlayer;
 import org.bukkit.Location;

@@ -1,4 +1,4 @@
-package com.github.ipecter.rtu.lightanticheat.checks.listeners.combat.reachutils;
+package com.github.ipecter.rtu.lightanticheat.util.combat.reach;
 
 import org.bukkit.entity.Entity;
 import org.bukkit.util.Vector;

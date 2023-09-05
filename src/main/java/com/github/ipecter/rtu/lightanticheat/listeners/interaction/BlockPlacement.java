@@ -1,4 +1,4 @@
-package com.github.ipecter.rtu.lightanticheat.checks.listeners.interaction;
+package com.github.ipecter.rtu.lightanticheat.listeners.interaction;
 
 import com.github.ipecter.rtu.lightanticheat.LACPlayer;
 import org.bukkit.Material;
@@ -18,8 +18,7 @@ public class BlockPlacement implements Listener {
     private static boolean isAirPlace(Block block) {
         for (BlockFace blockFace : BLOCK_FACES) {
             Block block1 = block.getRelative(blockFace);
-            if (!block1.isEmpty() && !block1.isLiquid())
-                return false;
+            if (!block1.isEmpty() && !block1.isLiquid()) return false;
         }
         return true;
     }
@@ -27,15 +26,13 @@ public class BlockPlacement implements Listener {
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
     public void onBlockPlace(BlockPlaceEvent event) {
 
-        if (!Config.irregularPlacement)
-            return;
+        if (!Config.irregularPlacement) return;
 
         Player player = event.getPlayer();
         LACPlayer lacPlayer = LACPlayer.get(player);
         long time = System.currentTimeMillis();
 
-        if (lacPlayer == null || lacPlayer.isBypass || time - lacPlayer.joinTime <= Config.disablerTimeOnJoin ||
-                Config.punishmentCommand == null || lacPlayer.isApiBypass || time - lacPlayer.lastQuickBreakTime < 1000)
+        if (lacPlayer == null || lacPlayer.isBypass || time - lacPlayer.joinTime <= Config.disablerTimeOnJoin || Config.punishmentCommand == null || lacPlayer.isApiBypass || time - lacPlayer.lastQuickBreakTime < 1000)
             return;
 
         // IrregularPlacementB (the placement is not possible)
@@ -49,19 +46,14 @@ public class BlockPlacement implements Listener {
         Material material = block.getType();
         PlayerInventory playerInventory = player.getInventory();
 
-        if (!Config.irregularPlacementA)
+        if (!Config.irregularPlacementA) return;
+        if (material == Material.LILY_PAD || playerInventory.getItemInMainHand().getType().name().contains("AXE") || playerInventory.getItemInOffHand().getType().name().contains("AXE"))
             return;
-        if (material == Material.LILY_PAD || playerInventory.getItemInMainHand().getType().name().contains("AXE") ||
-                playerInventory.getItemInOffHand().getType().name().contains("AXE"))
-            return;
-        if (!isAirPlace(block))
-            return;
+        if (!isAirPlace(block)) return;
 
-        if (material != Material.SAND && material != Material.RED_SAND &&
-                material != Material.GRAVEL && !material.name().contains("CONCRETE_POWDER"))
+        if (material != Material.SAND && material != Material.RED_SAND && material != Material.GRAVEL && !material.name().contains("CONCRETE_POWDER"))
             Violations.accurateViolation(player, CheckTypes.IRREGULAR_PLACEMENT_A_0, lacPlayer);
-        else
-            Violations.interactViolation(player, CheckTypes.IRREGULAR_PLACEMENT_A_0, lacPlayer);
+        else Violations.interactViolation(player, CheckTypes.IRREGULAR_PLACEMENT_A_0, lacPlayer);
     }
 
 }

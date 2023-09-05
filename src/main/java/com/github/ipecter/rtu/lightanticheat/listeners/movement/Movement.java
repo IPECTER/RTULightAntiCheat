@@ -1,4 +1,4 @@
-package com.github.ipecter.rtu.lightanticheat.checks.listeners.movement;
+package com.github.ipecter.rtu.lightanticheat.listeners.movement;
 
 import com.github.ipecter.rtu.lightanticheat.LACPlayer;
 import org.bukkit.GameMode;

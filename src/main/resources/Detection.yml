@@ -1,0 +1,10 @@
+bypass:
+  java: false
+  bedrock: false
+  permission: true
+disable:
+  timeOnJoin: 3
+  timeOnFlight: 6
+  minTPS: 0.0
+  maxPing: 0
+cancelCheat: true
